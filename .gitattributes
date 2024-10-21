@@ -1,0 +1,8 @@
+# Force LF for all files by default
+* text eol=lf
+# Override .bat files to be CRLF
+*.bat text eol=crlf
+# JARs are binary
+*.jar binary
+# But actually, treat JARs with LFS instead
+*.jar filter=lfs diff=lfs merge=lfs -text
